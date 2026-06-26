@@ -1,0 +1,561 @@
+<!-- ============================================================= -->
+<!--  THE VISHU TIMES — config-driven romantic A3 birthday paper   -->
+<!-- ============================================================= -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Vishu Times</title>
+
+<!-- ====================== EDIT EVERYTHING HERE ====================== -->
+<!--
+  HOW TO USE
+  1) Fill in the URLs and text below for each section.
+  2) media / hero.media  -> a PHOTO or VIDEO. Accepts:
+        - a photo link ending in .jpg .png .webp .gif
+        - a video link ending in .mp4 .webm .mov
+        - a YouTube / Vimeo link
+        - a Google Drive file link (it will embed & play)
+        - a file you put in the same repo, e.g. "media/childhood.jpg"
+     Leave "" to show nothing.
+  3) barcode -> any link you want behind the QR code (Drive folder,
+        a video, a photo album, anything). Leave "" for no code.
+  4) style  -> "frame" | "polaroid" | "oval"
+  5) viewOnly:
+        true  = the finished, clean, view-only paper (host THIS for the surprise)
+        false = full editor (upload photos, change styles, download/print)
+-->
+<script>
+const CONFIG = {
+
+  // NOTE: the links below are EXAMPLES so you can see how it looks.
+  //       Replace every media/barcode link with your own before hosting.
+
+  viewOnly: true,   // <-- true = surprise/view mode ;  false = editable editor
+
+  masthead: {
+    city:     "Pune  |  City of Love Edition",
+    special:  "\u2764 The Birthday & Love Special \u2764",
+    price:    "\u20B9 One Forever",
+    title:    "The Vishu Times",
+    tagline:  "all my love, in print",
+    volume:   "Vol. I \u2014 No. 1",
+    date:     "",                       // "" = today's date automatically
+    forecast: "showers of love \u2764"
+  },
+
+  headline: 'HAPPY BIRTHDAY <span class="pop">VISHU!</span>',
+  deck:     "Our Favourite Person Turns Another Year More Beautiful \u2014 Husband Reportedly Still Hopelessly, Helplessly Head Over Heels",
+
+  hero: {
+    media:   "https://picsum.photos/id/1011/700/840",   // EXAMPLE photo \u2014 put your best photo of her here
+    style:   "frame",
+    caption: "the one and only \u2014 my Vishu"
+  },
+
+  factbox: {
+    title: "All About My Vishu",
+    rows: [
+      ["Her name",          "Vishu Sharma"],
+      ["The day I fell",    "the very first hello"],
+      ["Her superpower",    "turning ordinary days into the best ones"],
+      ["Our song",          "the one we always hum off-key"],
+      ["Her weakness",      "chai, puppies, and a good cry at movies"],
+      ["My favourite thing","every single bit of her"],
+      ["Forever, because",  "she feels like home"]
+    ]
+  },
+
+  letter: {
+    title:      "A Love Letter, Just For You",
+    body:       "My dearest Vishu \u2014 happy birthday, my love. Of all the front pages in all the world, you are my favourite headline every single day. Thank you for your patience when I am impossible, your laugh that fixes everything, and the quiet way you make our little life feel enormous. This year I promise more dancing in the kitchen, more lazy Sundays, and a thousand more reasons to fall for you. You are my best decision, my softest landing, and my favourite person. Here's to you \u2014 today and always.",
+    sign:       "Forever yours",
+    barcode:    "https://example.com/our-story",        // EXAMPLE \u2014 link to your video / album / message
+    barcodeMsg: "Scan for a little video, made just for you \u2764"
+  },
+
+  // areas: "left", "right", "band" (bottom-left), "band2" (bottom-right)
+  sections: [
+    { area:"left",  kicker:"Childhood", style:"frame",
+      media:"https://picsum.photos/id/1062/600/450",
+      caption:"The smile that hasn't changed a bit",
+      body:"Long before any of us knew her, she was already the most curious, giggliest little girl in every room \u2014 forever climbing things she shouldn't and charming everyone she met. Some things, thankfully, never change.",
+      barcode:"https://example.com/childhood", barcodeMsg:"Scan to hear Mum's favourite story \u2764" },
+
+    { area:"left",  kicker:"Family", style:"polaroid",
+      media:"https://picsum.photos/id/219/600/450",
+      caption:"Where her big heart comes from",
+      body:"Loud Sunday lunches, a hundred inside jokes, and love you could feel from the doorway. This is the family that raised the warm, generous soul I get to call mine.",
+      barcode:"https://example.com/family", barcodeMsg:"Scan for a message from the family \u2764" },
+
+    { area:"right", kicker:"Parents", style:"oval",
+      media:"https://picsum.photos/id/177/600/600",
+      caption:"Her first and forever fans",
+      body:"The two people who loved her first \u2014 and taught her how to love everyone else so completely. We owe them the very best of her.",
+      barcode:"https://example.com/parents", barcodeMsg:"Scan to hear Mum & Dad \u2764" },
+
+    { area:"right", kicker:"Sister", style:"frame",
+      media:"https://picsum.photos/id/64/600/450",
+      caption:"Partner in every bit of mischief",
+      body:"From borrowed clothes to shared secrets to fits of laughter no one else understands \u2014 no one knows her quite like her sister does.",
+      barcode:"https://example.com/sister", barcodeMsg:"Scan for a sisterly surprise \u2764" },
+
+    { area:"band",  kicker:"Friends", style:"frame",
+      media:"https://www.w3schools.com/html/mov_bbb.mp4",   // EXAMPLE video \u2014 plays right in the frame
+      caption:"The chosen family",
+      body:"The late-night calls, the spontaneous plans, the people who became family. Press play \u2014 they had a few words to say. \u25B6",
+      barcode:"https://example.com/friends", barcodeMsg:"Scan for the full friends montage \u2764" },
+
+    { area:"band2", kicker:"Achievements", style:"polaroid",
+      media:"https://picsum.photos/id/180/600/450",
+      caption:"Proud doesn't even cover it",
+      body:"Every goal she set her mind to, she reached \u2014 and made it look effortless along the way. Here's to celebrating her wins, big and small, and to the next adventure.",
+      barcode:"https://example.com/achievements", barcodeMsg:"Scan to relive the big moment \u2764" }
+  ],
+
+  colophon: "Printed with all my love \u00B7 for Vishu, on her birthday \u2764"
+};
+</script>
+<!-- ==================== END OF EDITABLE CONFIG ==================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<style>
+  :root{
+    --paper:#f7ece4; --ink:#3a2a28; --ink-soft:#6e524e;
+    --rule:#d8c2b4; --rule-dark:#6e4a45; --rose:#a83250; --wine:#7c2440; --gold:#b78a3c;
+    --script:"Great Vibes",cursive;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:#2a1b1f;background-image:radial-gradient(circle at 30% 8%,#3c272b 0%,#241518 75%);
+    font-family:"PT Serif",Georgia,serif;color:var(--ink);padding:26px 12px 60px}
+
+  .toolbar{max-width:900px;margin:0 auto 18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
+  .toolbar .hint{width:100%;text-align:center;color:#f3ddd2;font-family:"Special Elite",monospace;font-size:12.5px;line-height:1.5;opacity:.92;margin-bottom:2px}
+  .btn{font-family:"Special Elite",monospace;font-size:13px;letter-spacing:.5px;background:var(--paper);color:var(--ink);border:1.5px solid var(--ink);padding:9px 16px;border-radius:2px;cursor:pointer;box-shadow:2px 2px 0 #160d0e;transition:transform .06s,box-shadow .06s}
+  .btn:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 #160d0e}
+  .btn:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #160d0e}
+  .btn[disabled]{opacity:.6;cursor:wait;transform:none;box-shadow:2px 2px 0 #160d0e}
+  .btn.rose{background:var(--rose);color:#fff;border-color:var(--wine)}
+  .btn.green{background:#2c7a43;color:#fff;border-color:#1c5630}
+  .btn.gold{background:var(--gold);color:#fff;border-color:#7d6015}
+  body.mode-clean .edit-only{display:none}
+
+  .paper{width:100%;max-width:900px;margin:0 auto;background:var(--paper);padding:24px 28px 32px;position:relative;overflow:hidden;box-shadow:0 26px 64px rgba(0,0,0,.55)}
+  .paper::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 80px rgba(120,60,60,.14)}
+  .rule{border:0;border-top:1px solid var(--rule-dark);margin:0}
+  .rule.thick{border-top:3px solid var(--rule-dark)}
+  .rule.dbl{border-top:4px double var(--rule-dark)}
+  .rule.hair{border-top:1px solid var(--rule)}
+  .rule.rose{border-top:2px solid var(--rose)}
+  .flourish{display:flex;align-items:center;gap:10px;color:var(--rose);margin:8px 0;font-size:14px}
+  .flourish::before,.flourish::after{content:"";flex:1;border-top:1px solid var(--rule-dark)}
+
+  .topbar{background:var(--wine);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-family:"Special Elite",monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:5px 12px}
+  .topbar [contenteditable]{outline:none}
+  .nameplate{text-align:center;padding:8px 0 2px}
+  .nameplate h1{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(36px,7.6vw,76px);line-height:.95;margin:4px 0 0;letter-spacing:.5px}
+  .nameplate .sub{font-family:var(--script);font-size:clamp(20px,4vw,30px);color:var(--rose);margin:0;line-height:1.1}
+  .dateline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-family:"Special Elite",monospace;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--ink-soft);padding:6px 2px}
+  .dateline b{color:var(--ink)}
+
+  .headline{font-family:"Playfair Display",serif;font-weight:900;text-transform:uppercase;text-align:center;font-size:clamp(32px,7.4vw,72px);line-height:.92;margin:10px 0 2px}
+  .headline .pop{color:var(--rose)}
+  .deck{font-family:"Playfair Display",serif;font-style:italic;font-weight:700;text-align:center;font-size:clamp(14px,2.2vw,20px);color:var(--ink-soft);max-width:760px;margin:2px auto 8px;line-height:1.3}
+
+  .body-grid{display:grid;grid-template-columns:1fr 1.34fr 1fr;gap:0;align-items:start}
+  .col{padding:14px 16px;min-width:0}
+  .col.left{border-right:1px solid var(--rule-dark)}
+  .col.right{border-left:1px solid var(--rule-dark)}
+  .col.center{padding-top:4px}
+  .kicker{font-family:"Special Elite",monospace;text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--rose);border-bottom:2px solid var(--rule-dark);padding-bottom:4px;margin:0 0 10px}
+
+  [contenteditable]:empty:before{content:attr(data-ph);color:#c0a99c;font-style:italic;font-weight:400}
+  body.mode-clean [contenteditable]:empty:before{content:""}
+
+  .frame-pick{display:flex;gap:6px;margin-bottom:8px}
+  .frame-pick button{flex:1;font-family:"Special Elite",monospace;font-size:10px;letter-spacing:.3px;padding:5px 4px;border:1px solid var(--rule-dark);background:#fff8f3;color:var(--ink);border-radius:3px;cursor:pointer;text-transform:uppercase}
+  .frame-pick button:hover{border-color:var(--rose)}
+  .frame-pick button.active{background:var(--rose);color:#fff;border-color:var(--wine)}
+
+  .photo-frame{position:relative;display:block;width:100%;max-width:100%;height:0;padding-bottom:75%;overflow:hidden}
+  .photo-frame.hero{padding-bottom:120%}
+  .photo-frame .media{position:absolute;inset:0;background-size:cover;background-position:center;display:none;overflow:hidden}
+  .photo-frame.filled .media{display:block}
+  .media .vid,.media iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#000}
+  .media .vid{object-fit:cover}
+  .photo-frame .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center;padding:10px;color:var(--ink-soft);font-family:"Special Elite",monospace;font-size:11px;letter-spacing:.3px}
+  .photo-frame .ph .plus{font-size:22px;line-height:1;width:38px;height:38px;border:1.4px solid var(--ink-soft);border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .photo-frame input[type=file]{display:none}
+  body:not(.mode-clean) .photo-frame{cursor:pointer}
+
+  .photo-frame.style-frame{background:#fff;border:1px solid var(--rule-dark)}
+  .photo-frame.style-frame .media{inset:6px;border:2px solid var(--gold)}
+  .photo-frame.style-frame .ph{inset:6px;border:1px dashed var(--rule)}
+  .photo-frame.style-polaroid{background:#fff;border:1px solid #e8ddcf}
+  .photo-frame.style-polaroid .media{inset:8px 8px 26px}
+  .photo-frame.style-polaroid .ph{inset:8px 8px 26px}
+  .photo-frame.style-oval{background:transparent;overflow:visible}
+  .photo-frame.style-oval .media{border-radius:50%;border:3px solid var(--gold)}
+  .photo-frame.style-oval .ph{border-radius:50%;border:2px dashed var(--rule)}
+
+  body.mode-clean .photo-frame{cursor:default}
+  body.mode-clean .photo-frame .ph{display:none}
+  body.mode-clean .photo-frame:not(.filled){border-color:transparent!important;background:transparent!important}
+
+  .media-row{display:flex;gap:5px;margin-top:6px}
+  .media-row input{flex:1;min-width:0;font-family:"Special Elite",monospace;font-size:10px;padding:6px;border:1px solid var(--rule-dark);background:#fff8f3;color:var(--ink);border-radius:2px}
+  .media-row button{font-family:"Special Elite",monospace;font-size:10px;border:1px solid var(--rule-dark);background:var(--ink);color:var(--paper);padding:0 9px;border-radius:2px;cursor:pointer}
+  .media-row button:hover{background:var(--rose);border-color:var(--wine)}
+  .media-row .media-clear{background:#fff8f3;color:var(--ink);min-width:30px}
+
+  .hero-cap{text-align:center;font-family:var(--script);font-size:clamp(18px,3.5vw,26px);color:var(--rose);margin:6px 0 12px;line-height:1.1}
+  .cap-title{font-family:"Playfair Display",serif;font-weight:900;font-size:17px;line-height:1.12;margin:9px 0 4px}
+  .cap-body{font-size:13px;line-height:1.46;text-align:justify}
+  section.mem{margin-bottom:18px;break-inside:avoid}
+
+  .dispatch{display:flex;gap:12px;align-items:center;margin-top:10px}
+  body.mode-clean .dispatch:not(.has-qr){display:none}
+  .qr-target{width:84px;height:84px;min-width:84px;background:#fff;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;padding:4px}
+  .qr-target img,.qr-target canvas,.qr-target table{display:block;max-width:100%;height:auto}
+  .qr-target .qr-ph{font-family:"Special Elite",monospace;font-size:8.5px;color:#c0a99c;text-align:center;line-height:1.25}
+  .dispatch .right{flex:1;min-width:0}
+  .qr-msg{font-family:"PT Serif",serif;font-style:italic;font-size:12.5px;line-height:1.4;color:var(--ink);margin-bottom:6px}
+  .voice-row{display:flex;gap:5px}
+  body.mode-clean .voice-row{display:none}
+  .voice-row input{flex:1;min-width:0;font-family:"Special Elite",monospace;font-size:10px;padding:6px;border:1px solid var(--ink);background:#fff8f3;color:var(--ink);border-radius:2px}
+  .voice-row button{font-family:"Special Elite",monospace;font-size:10px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:0 9px;border-radius:2px;cursor:pointer}
+  .voice-row button:hover{background:var(--rose);border-color:var(--wine)}
+
+  .factbox{border:2px solid var(--rule-dark);background:rgba(255,255,255,.22);padding:12px 14px;margin:0 0 14px}
+  .factbox h3{font-family:var(--script);font-weight:400;font-size:30px;text-align:center;margin:0 0 8px;color:var(--rose);line-height:1}
+  .frow{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:4px 0;border-bottom:1px dotted var(--rule);line-height:1.35}
+  .frow:last-child{border-bottom:none}
+  .frow .lab{font-family:"Special Elite",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-soft);white-space:nowrap}
+  .frow .val{text-align:right;font-weight:700;min-width:0;overflow-wrap:anywhere}
+  .letter h3{font-family:var(--script);font-weight:400;font-size:30px;text-align:center;margin:0 0 4px;color:var(--rose);line-height:1}
+  .letter .body{font-size:13.5px;line-height:1.6;text-align:justify}
+  .letter .body:first-letter{font-family:"Playfair Display",serif;font-weight:900;float:left;font-size:46px;line-height:.7;padding:6px 7px 0 0;color:var(--rose)}
+  .letter .sign{text-align:right;font-family:var(--script);font-size:24px;color:var(--rose);margin-top:6px}
+
+  .band-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+  .band-grid .col{padding:14px 16px;min-width:0}
+  .band-grid .col:first-child{border-right:1px solid var(--rule-dark)}
+  .colophon{text-align:center;font-family:var(--script);font-size:22px;color:var(--rose);margin-top:12px}
+
+  @media (max-width:760px){
+    .body-grid{grid-template-columns:1fr}
+    .col.left,.col.right{border:0;border-top:3px double var(--rule-dark)}
+    .band-grid{grid-template-columns:1fr}
+    .band-grid .col:first-child{border-right:0;border-bottom:3px double var(--rule-dark)}
+    .dispatch{flex-direction:column;align-items:stretch}
+    .qr-target{margin:0 auto}
+  }
+</style>
+
+<div class="toolbar" id="toolbar">
+  <div class="hint edit-only">Editor (full) mode. Set <b>viewOnly: true</b> in the CONFIG at the top of the file to host the finished surprise. Tap a frame for a photo/video, paste links, then <b>Download HD image</b> or <b>Print as one A3</b>.</div>
+  <button class="btn green" id="modeBtn" onclick="toggleMode()">&#10003; Done &mdash; clean view</button>
+  <button class="btn gold" id="dlBtn" onclick="downloadImage(this)">&#11015; Download HD image</button>
+  <button class="btn rose" id="prBtn" onclick="printOneA3(this)">&#128424; Print / Save as PDF</button>
+  <button class="btn edit-only" onclick="addMemory('left')">&#43; Memory (left)</button>
+  <button class="btn edit-only" onclick="addMemory('right')">&#43; Memory (right)</button>
+  <button class="btn edit-only" onclick="addMemory('band2')">&#43; Memory (bottom)</button>
+</div>
+
+<div class="paper" id="paper">
+
+  <div class="topbar">
+    <span contenteditable="true" id="cfg-city"></span>
+    <span contenteditable="true" id="cfg-special"></span>
+    <span>Price: <span contenteditable="true" id="cfg-price"></span></span>
+  </div>
+
+  <div class="nameplate">
+    <h1 contenteditable="true" id="cfg-title"></h1>
+    <p class="sub" contenteditable="true" id="cfg-tagline"></p>
+  </div>
+  <hr class="rule rose">
+  <div class="dateline">
+    <div contenteditable="true" id="cfg-volume"></div>
+    <div id="today" contenteditable="true"></div>
+    <div>Forecast: <b contenteditable="true" id="cfg-forecast"></b></div>
+  </div>
+  <hr class="rule dbl">
+
+  <h1 class="headline" contenteditable="true" id="cfg-headline"></h1>
+  <p class="deck" contenteditable="true" id="cfg-deck"></p>
+  <div class="flourish">&#10084;</div>
+
+  <div class="body-grid">
+    <div class="col left" id="col-left"></div>
+
+    <div class="col center">
+      <div class="photo-block" id="hero-block">
+        <div class="frame-pick edit-only"><button class="active" data-style="frame">Frame</button><button data-style="polaroid">Polaroid</button><button data-style="oval">Oval</button></div>
+        <label class="photo-frame hero style-frame"><input type="file" accept="image/*,video/*"><span class="media"></span><span class="ph"><span class="plus">+</span>Add your main photo or video</span></label>
+        <div class="media-row edit-only"><input class="media-url" placeholder="or paste image / video / YouTube link"><button class="media-go">Use link</button><button class="media-clear" title="Clear">&#10005;</button></div>
+      </div>
+      <div class="hero-cap" contenteditable="true" id="cfg-herocap"></div>
+
+      <div class="factbox">
+        <h3 contenteditable="true" id="cfg-factTitle"></h3>
+        <div id="cfg-factrows"></div>
+      </div>
+
+      <div class="letter">
+        <h3 contenteditable="true" id="cfg-letterTitle"></h3>
+        <div class="body" contenteditable="true" id="cfg-letterBody"></div>
+        <div class="sign" contenteditable="true" id="cfg-letterSign"></div>
+      </div>
+
+      <div class="dispatch" id="letter-dispatch"><div class="qr-target"><div class="qr-ph">code here</div></div><div class="right"><div class="qr-msg" contenteditable="true"></div><div class="voice-row"><input class="voice-url" placeholder="paste Drive / video / photo link..."><button class="qr-gen">Make code</button></div></div></div>
+    </div>
+
+    <div class="col right" id="col-right"></div>
+  </div>
+
+  <hr class="rule dbl" style="margin-top:6px">
+
+  <div class="band-grid">
+    <div class="col" id="col-band-1"></div>
+    <div class="col" id="col-band-2"></div>
+  </div>
+
+  <hr class="rule thick" style="margin-top:6px">
+  <div class="colophon" contenteditable="true" id="cfg-colophon"></div>
+</div>
+
+<script>
+  var C = (typeof CONFIG !== 'undefined' && CONFIG) ? CONFIG : {};
+
+  /* ---------- media helpers ---------- */
+  function markFilled(frame,kind){
+    frame.classList.add('filled');
+    frame.classList.remove('media-image','media-video','media-embed');
+    if(kind)frame.classList.add('media-'+kind);
+    var ph=frame.querySelector('.ph');if(ph)ph.style.display='none';
+  }
+  function clearFrame(frame){
+    var m=frame.querySelector('.media');if(m){m.innerHTML='';m.style.backgroundImage='';}
+    frame.classList.remove('filled','media-image','media-video','media-embed');
+    frame.removeAttribute('data-poster');
+    var ph=frame.querySelector('.ph');if(ph)ph.style.display='';
+  }
+  function setImage(frame,src){var m=frame.querySelector('.media');m.innerHTML='';m.style.backgroundImage='url('+src+')';markFilled(frame,'image');}
+  function setVideo(frame,src,isLocal){
+    var m=frame.querySelector('.media');m.style.backgroundImage='';
+    m.innerHTML='<video class="vid" controls playsinline preload="metadata"></video>';
+    var v=m.querySelector('video');v.src=src;markFilled(frame,'video');
+    if(isLocal){var done=false;
+      function grab(){if(done)return;done=true;try{var c=document.createElement('canvas');c.width=v.videoWidth||640;c.height=v.videoHeight||480;c.getContext('2d').drawImage(v,0,0,c.width,c.height);frame.setAttribute('data-poster',c.toDataURL('image/jpeg',0.8));}catch(e){}}
+      v.addEventListener('loadeddata',function(){try{v.currentTime=0.12;}catch(e){grab();}});
+      v.addEventListener('seeked',grab);
+    }
+  }
+  function setEmbed(frame,src,poster){
+    var m=frame.querySelector('.media');m.style.backgroundImage='';
+    m.innerHTML='<iframe src="'+src+'" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen referrerpolicy="no-referrer"></iframe>';
+    markFilled(frame,'embed');if(poster)frame.setAttribute('data-poster',poster);
+  }
+  function parseAndSet(frame,raw){
+    var url=(raw||'').trim();if(!url)return;
+    var yt=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([\w-]{6,})/);
+    if(yt){setEmbed(frame,'https://www.youtube.com/embed/'+yt[1],'https://img.youtube.com/vi/'+yt[1]+'/hqdefault.jpg');return;}
+    var vm=url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if(vm){setEmbed(frame,'https://player.vimeo.com/video/'+vm[1]);return;}
+    var gd=url.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
+    if(gd){setEmbed(frame,'https://drive.google.com/file/d/'+gd[1]+'/preview');return;}
+    if(/\.(mp4|webm|ogg|ogv|mov|m4v)(\?|#|$)/i.test(url)){setVideo(frame,url,false);return;}
+    if(/\.(jpe?g|png|gif|webp|avif|bmp)(\?|#|$)/i.test(url)){setImage(frame,url);return;}
+    if(/^(https?:)?\/\//i.test(url)||url.indexOf('/')===0||url.indexOf('.')===0){setEmbed(frame,url);return;}
+    setEmbed(frame,'https://'+url);
+  }
+
+  function makeQR(target,url){
+    target.innerHTML="";
+    if(typeof QRCode==="undefined"){target.innerHTML='<div class="qr-ph">offline - connect &amp; reload</div>';return false;}
+    new QRCode(target,{text:url,width:80,height:80,colorDark:"#3a2a28",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+    return true;
+  }
+  function applyBarcode(dispatch,url,msg){
+    if(msg!=null)dispatch.querySelector('.qr-msg').textContent=msg;
+    var input=dispatch.querySelector('.voice-url');
+    var u=(url||'').trim();
+    if(input)input.value=u;
+    if(u){if(!/^https?:\/\//i.test(u))u='https://'+u;if(makeQR(dispatch.querySelector('.qr-target'),u))dispatch.classList.add('has-qr');}
+  }
+  function applyStyle(block,style){
+    var frame=block.querySelector('.photo-frame');
+    frame.classList.remove('style-frame','style-polaroid','style-oval');
+    frame.classList.add('style-'+(style||'frame'));
+    var pick=block.querySelector('.frame-pick');
+    if(pick)pick.querySelectorAll('button').forEach(function(b){b.classList.toggle('active',b.dataset.style===(style||'frame'));});
+  }
+
+  /* ---------- wiring (for editor mode) ---------- */
+  function wireBlock(block){
+    if(block.dataset.wired)return;block.dataset.wired="1";
+    var frame=block.querySelector('.photo-frame');
+    var input=frame.querySelector('input[type=file]');
+    var urlInput=block.querySelector('.media-url');
+    var go=block.querySelector('.media-go');
+    var clr=block.querySelector('.media-clear');
+    frame.addEventListener('click',function(e){
+      if(document.body.classList.contains('mode-clean'))return;
+      if(e.target.closest('video,iframe'))return;
+      if(e.target===input)return;input.click();
+    });
+    input.addEventListener('change',function(){
+      var f=input.files&&input.files[0];if(!f)return;
+      if((f.type||'').indexOf('video')===0){setVideo(frame,URL.createObjectURL(f),true);}
+      else{var r=new FileReader();r.onload=function(){setImage(frame,r.result);};r.readAsDataURL(f);}
+    });
+    if(go)go.addEventListener('click',function(){parseAndSet(frame,urlInput.value);});
+    if(urlInput)urlInput.addEventListener('keydown',function(e){if(e.key==='Enter')parseAndSet(frame,urlInput.value);});
+    if(clr)clr.addEventListener('click',function(){clearFrame(frame);if(urlInput)urlInput.value='';});
+    var pick=block.querySelector('.frame-pick');
+    if(pick)pick.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click',function(){applyStyle(block,b.dataset.style);});
+    });
+  }
+  function wireDispatch(box){
+    if(box.dataset.wired)return;box.dataset.wired="1";
+    var gen=box.querySelector('.qr-gen'),url=box.querySelector('.voice-url'),target=box.querySelector('.qr-target');
+    gen.addEventListener('click',function(){
+      var v=(url.value||"").trim();if(!v){url.focus();return;}
+      if(!/^https?:\/\//i.test(v))v="https://"+v;
+      if(makeQR(target,v))box.classList.add('has-qr');
+    });
+    url.addEventListener('keydown',function(e){if(e.key==='Enter')gen.click();});
+  }
+  function wireAll(root){
+    (root||document).querySelectorAll('.photo-block').forEach(wireBlock);
+    (root||document).querySelectorAll('.dispatch').forEach(wireDispatch);
+  }
+
+  /* ---------- section builder ---------- */
+  function memHTML(kicker,phtext){
+    return '<div class="kicker" contenteditable="true">'+kicker+'</div>'
+      +'<div class="photo-block"><div class="frame-pick edit-only"><button class="active" data-style="frame">Frame</button><button data-style="polaroid">Polaroid</button><button data-style="oval">Oval</button></div>'
+      +'<label class="photo-frame style-frame"><input type="file" accept="image/*,video/*"><span class="media"></span><span class="ph"><span class="plus">+</span>'+phtext+'</span></label>'
+      +'<div class="media-row edit-only"><input class="media-url" placeholder="or paste image / video / YouTube link"><button class="media-go">Use link</button><button class="media-clear" title="Clear">&#10005;</button></div></div>'
+      +'<div class="cap-title" contenteditable="true" data-ph="A little caption..."></div>'
+      +'<div class="cap-body" contenteditable="true" data-ph="Write this memory here..."></div>'
+      +'<div class="dispatch"><div class="qr-target"><div class="qr-ph">code here</div></div><div class="right"><div class="qr-msg" contenteditable="true"></div><div class="voice-row"><input class="voice-url" placeholder="paste Drive / video / photo link..."><button class="qr-gen">Make code</button></div></div></div>';
+  }
+  function buildSection(s){
+    var sec=document.createElement('section');sec.className='mem';
+    sec.innerHTML=memHTML(s.kicker||'Memory', s.ph||'Add a photo or video');
+    if(s.caption)sec.querySelector('.cap-title').textContent=s.caption;
+    if(s.body)sec.querySelector('.cap-body').textContent=s.body;
+    var block=sec.querySelector('.photo-block');
+    applyStyle(block,s.style);
+    if(s.media){parseAndSet(block.querySelector('.photo-frame'),s.media);var mi=block.querySelector('.media-url');if(mi)mi.value=s.media;}
+    applyBarcode(sec.querySelector('.dispatch'), s.barcode, s.barcodeMsg);
+    return sec;
+  }
+
+  /* ---------- apply CONFIG ---------- */
+  function setTxt(id,v,html){var el=document.getElementById(id);if(el&&v!=null){if(html)el.innerHTML=v;else el.textContent=v;}}
+  function applyConfig(){
+    var m=C.masthead||{};
+    setTxt('cfg-city',m.city);setTxt('cfg-special',m.special);setTxt('cfg-price',m.price);
+    setTxt('cfg-title',m.title);setTxt('cfg-tagline',m.tagline);setTxt('cfg-volume',m.volume);setTxt('cfg-forecast',m.forecast);
+    var t=document.getElementById('today');
+    if(m.date){t.textContent=m.date;}
+    else{var d=new Date(),o={weekday:'long',year:'numeric',month:'long',day:'numeric'};try{t.textContent=d.toLocaleDateString(undefined,o);}catch(e){t.textContent=d.toDateString();}}
+
+    setTxt('cfg-headline',C.headline,true);
+    setTxt('cfg-deck',C.deck);
+
+    if(C.hero){applyStyle(document.getElementById('hero-block'),C.hero.style);
+      if(C.hero.media){parseAndSet(document.querySelector('#hero-block .photo-frame'),C.hero.media);var hi=document.querySelector('#hero-block .media-url');if(hi)hi.value=C.hero.media;}
+      setTxt('cfg-herocap',C.hero.caption);}
+
+    if(C.factbox){setTxt('cfg-factTitle',C.factbox.title);
+      var rows=document.getElementById('cfg-factrows');rows.innerHTML='';
+      (C.factbox.rows||[]).forEach(function(r){
+        var div=document.createElement('div');div.className='frow';
+        div.innerHTML='<span class="lab"></span><span class="val" contenteditable="true"></span>';
+        div.querySelector('.lab').textContent=r[0];div.querySelector('.val').textContent=r[1];
+        rows.appendChild(div);
+      });
+    }
+
+    if(C.letter){setTxt('cfg-letterTitle',C.letter.title);setTxt('cfg-letterBody',C.letter.body);setTxt('cfg-letterSign',C.letter.sign);
+      applyBarcode(document.getElementById('letter-dispatch'),C.letter.barcode,C.letter.barcodeMsg);}
+
+    var areaMap={left:'col-left',right:'col-right',band:'col-band-1',band2:'col-band-2'};
+    ['col-left','col-right','col-band-1','col-band-2'].forEach(function(id){document.getElementById(id).innerHTML='';});
+    (C.sections||[]).forEach(function(s){
+      var host=document.getElementById(areaMap[s.area]||'col-left');
+      host.appendChild(buildSection(s));
+    });
+
+    setTxt('cfg-colophon',C.colophon);
+  }
+
+  /* ---------- modes ---------- */
+  function setMode(m){
+    var clean=(m==='clean');
+    document.body.classList.toggle('mode-clean',clean);
+    document.body.classList.toggle('mode-edit',!clean);
+    document.querySelectorAll('[contenteditable]').forEach(function(el){el.setAttribute('contenteditable',clean?'false':'true');});
+    var b=document.getElementById('modeBtn');
+    if(b){b.innerHTML=clean?'&#9999; Back to editing':'&#10003; Done &mdash; clean view';b.classList.toggle('green',!clean);}
+  }
+  function toggleMode(){setMode(document.body.classList.contains('mode-clean')?'edit':'clean');}
+
+  function addMemory(where){
+    if(document.body.classList.contains('mode-clean'))return;
+    var map={left:'col-left',right:'col-right',band:'col-band-1',band2:'col-band-2'};
+    var host=document.getElementById(map[where]||'col-left');
+    var s=buildSection({kicker:'New Memory',style:'frame',barcodeMsg:'Scan to hear a little message \u2764'});
+    host.appendChild(s);wireAll(s);s.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* ---------- export ---------- */
+  function captureCanvas(){
+    if(typeof html2canvas==="undefined")return Promise.reject(new Error("renderer offline"));
+    var ready=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
+    return ready.then(function(){
+      return html2canvas(document.getElementById('paper'),{
+        scale:3, backgroundColor:'#f7ece4', useCORS:true, logging:false, windowWidth:1140,
+        onclone:function(doc){
+          doc.body.classList.add('mode-clean');
+          var p=doc.getElementById('paper');if(p){p.style.width='1100px';p.style.maxWidth='1100px';p.style.margin='0';p.style.boxShadow='none';}
+          doc.querySelectorAll('.photo-frame.media-video,.photo-frame.media-embed').forEach(function(f){
+            var mm=f.querySelector('.media');if(!mm)return;mm.innerHTML='';
+            var poster=f.getAttribute('data-poster');
+            if(poster&&poster.indexOf('data:')===0){mm.style.backgroundImage='url('+poster+')';}
+            else{mm.style.background='linear-gradient(135deg,#f3d9d0,#efe6da)';}
+            var ov=doc.createElement('div');
+            ov.style.cssText='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#7c2440;';
+            ov.innerHTML='<div style="width:46px;height:46px;border-radius:50%;background:rgba(124,36,64,.88);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;">&#9658;</div><div style="font-family:Special Elite,monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;">Watch the video</div>';
+            mm.appendChild(ov);
+          });
+        }
+      });
+    });
+  }
+  function busy(btn,on){if(!btn)return;if(on){btn.dataset.txt=btn.innerHTML;btn.disabled=true;btn.innerHTML='Rendering...';}else{btn.disabled=false;btn.innerHTML=btn.dataset.txt||'';}}
+  function downloadImage(btn){busy(btn,true);captureCanvas().then(function(c){var a=document.createElement('a');a.download='The-Vishu-Times.png';a.href=c.toDataURL('image/png');document.body.appendChild(a);a.click();document.body.removeChild(a);busy(btn,false);}).catch(function(e){busy(btn,false);alert('Could not render: '+e.message);});}
+  function printOneA3(btn){busy(btn,true);captureCanvas().then(function(c){var data=c.toDataURL('image/png');var aspect=c.width/c.height;var m=7,L=406,pw,ph;if(aspect<=1){ph=L;pw=Math.round(L*aspect);}else{pw=L;ph=Math.round(L/aspect);}var ifr=document.createElement('iframe');ifr.style.cssText='position:fixed;right:0;bottom:0;width:0;height:0;border:0;';document.body.appendChild(ifr);var doc=ifr.contentWindow.document;doc.open();doc.write('<!DOCTYPE html><html><head><meta charset="utf-8"><style>@page{size:'+pw+'mm '+ph+'mm;margin:'+m+'mm}html,body{height:100%;margin:0;padding:0}body{display:flex;align-items:center;justify-content:center;background:#fff}img{width:100%;height:100%;object-fit:contain;display:block}</style></head><body><img src="'+data+'"></body></html>');doc.close();var img=doc.querySelector('img');img.onload=function(){setTimeout(function(){ifr.contentWindow.focus();ifr.contentWindow.print();setTimeout(function(){document.body.removeChild(ifr);},1500);},250);};busy(btn,false);}).catch(function(e){busy(btn,false);alert('Could not print: '+e.message);});}
+
+  /* ---------- boot ---------- */
+  applyConfig();
+  wireAll(document);
+  var modeBtn=document.getElementById('modeBtn');
+  if(C.viewOnly){
+    // VIEW MODE: clean paper, no editing. Only the download/print buttons remain.
+    setMode('clean');
+    if(modeBtn)modeBtn.style.display='none';   // hide the edit-mode toggle
+  }else{
+    // FULL MODE: the editor with placeholders and all controls.
+    setMode('edit');
+  }
+</script>
